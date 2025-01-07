@@ -9,7 +9,7 @@ f = Fernet(key)
 
 @app.route('/')
 def hello_world():
-    return "Bienvenue sur l'application de chiffrement et déchiffrement !" #test
+    return "Bienvenue sur l'application de chiffrement et déchiffrement !" #test1
 
 @app.route('/exercice1')
 def exo1():
