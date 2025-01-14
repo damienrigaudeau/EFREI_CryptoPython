@@ -39,6 +39,9 @@ def exo_maisonv1():
 def exo_maisonv2():
      return render_template('maison_v2.html')
 
+@app.route('/valet')
+def exo_valet():
+     return render_template('valet.svg')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
