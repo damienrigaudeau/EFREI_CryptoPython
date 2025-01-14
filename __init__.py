@@ -42,6 +42,10 @@ def exo_maisonv2():
 @app.route('/valet')
 def exo_valet():
      return render_template('valet.svg')
+
+@app.route('/chenille')
+def exo_chenille():
+     return render_template('chenille.html')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
