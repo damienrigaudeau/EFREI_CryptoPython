@@ -30,6 +30,10 @@ def exo4():
 @app.route('/svg')
 def exo_svg():
      return render_template('svg.html')
+
+@app.route('/maison_version_chatgpt')
+def exo_maisonv1():
+     return render_template('maison_version_chatgpt.html')
     
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
