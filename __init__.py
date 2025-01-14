@@ -35,6 +35,11 @@ def exo_svg():
 def exo_maisonv1():
      return render_template('maison_version_chatgpt.html')
     
+@app.route('/maison_v2')
+def exo_maisonv2():
+     return render_template('maison_v2.html')
+
+    
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
     valeur_bytes = valeur.encode()  # Conversion str -> bytes
