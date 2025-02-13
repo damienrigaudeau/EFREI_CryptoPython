@@ -1,0 +1,241 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Systèmes & Réseaux</title>
+  <!-- Favicon (à remplacer par ton image) -->
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- SECTION ACCUEIL -->
+  <header id="home">
+    <div class="hero">
+      <!-- Ajout du GIF au-dessus du titres -->
+      <img src="static/images/gif4.gif" alt="Gif d'accueil" class="hero-gif">
+      <h1>Bienvenue sur mon Portfolio !</h1>
+      <p>Étudiant en Licence générale Informatique en Alternance!</p>
+    </div>
+    <nav>
+      <span class="menu-icon">Menu</span>
+      <ul class="nav-menu">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#experience">Expériences</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>    
+    <!-- Seule flèche autorisée : flèche de défilement vers la section 'À propos' -->
+    <a href="#about" class="scroll-down"></a>
+  </header>
+
+  <!-- SECTION À PROPOS -->
+  <section id="about">
+    <h2>À propos de moi</h2>
+    <p>
+      Passionné par l’informatique depuis toujours, j'ai suivi un cursus en BTS SIO SISR puis en Licence générales informatique avec le CNAM.
+      À l'issue de ma licence, je souhaite poursuivre en Master IRS en alternance !
+    </p>
+    <!-- L'image est maintenant plus grande grâce à la modification de sa largeur (classe .illustration) -->
+    <img src="static/images/moi.png" alt="Illustration" class="illustration">
+    <p>
+      Mon objectif serait d'acquérir le plus d'expériences possible à travers le monde du travail afin de devenir expert dans la mise en place de solutions d'infrastructures réseaux et systèmes, tout en ayant une certaine prévoyance en termes de sécurité. À terme, je souhaite un jour créer ma propre entreprise et concrétiser mes idées dans ce milieu.
+    </p>
+  </section>
+  <!-- SECTION COMPÉTENCES -->
+  <section id="skills">
+    <h2>Compétences</h2>
+    <ul>
+      <li>Windows Serveur : MDT, Active Directory...</li>
+      <li>Réseau : Cisco, Mikrotik</li>
+      <li>Firewall/Proxy : PfSense</li>
+      <li>Azure / Office 365 : notions globales</li>
+      <li>Automatisation : Bash, PowerShell</li>
+    </ul>
+    <h3> </h3>
+    <ul>
+      <li>Autonome</li>
+      <li>Organisationnel</li>
+      <li>Travail d'équipe</li>
+      <li>Appliqué</li>
+    </ul>
+  </section>
+  <!-- SECTION PROJETS -->
+  <section id="projects">
+    <h2>Dernier projets d'entreprise</h2>
+    <div class="project">
+      <h3>Mise en place d’une solution de déploiement (MDT)</h3>
+      <p>
+        Création d'un serveur de déploiement d'images (déploiement logiciel et paramétrages)
+      </p>
+    </div>
+    <div class="project">
+      <h3>Sécurisation et optimisation du réseau</h3>
+      <p>
+        Configuration optimisée des équipements, inventoring multi-site et sécurisation
+      </p>
+    </div>
+    <div class="project">
+      <h3>Mise en place d'un réseau de caméra</h3>
+      <p>
+        Sécurisation des bureaux
+      </p>
+    </div>
+  </section>
+  <!-- SECTION EXPÉRIENCES -->
+  <section id="experience">
+    <h2>Expériences</h2>
+    <!-- Conteneur des flip cards -->
+    <div class="experience-cards">
+      <!-- Flip Card 1 : Kickmaker -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="static/images/KM.png" alt="Kickmaker">
+          </div>
+          <div class="flip-card-back">
+            <p>
+              Alternance chez Kickmaker en tant que IT & Office Owner (Gérant du parc informatique) Administration des 4 sites en France et seul sur le parc ordinateur. (1 AN)
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Flip Card 2 : APHP Paul Doumer -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="static/images/APHP.png" alt="APHP Paul Doumer">
+          </div>
+          <div class="flip-card-back">
+            <p>
+              Stage chez APHP Paul Doumer en tant que technicien au support informatique (1 mois)
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Flip Card 3 : Edmond de Rothchild -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="static/images/ROTHSCHILD.png" alt="Edmond de Rothschild">
+          </div>
+          <div class="flip-card-back">
+            <p>
+              Stage chez Banque Edmond de Rothchild en tant que technicien au support informatique (1 mois et demi)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- SECTION CERTIFICATIONS -->
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="certification-cards">
+    <!-- Certification 1 -->
+    <div class="flip-card certification-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="static/images/CNAMV2.png" alt="Certification 1">
+        </div>
+        <div class="flip-card-back">
+          <p>Le certificat de compétence Analyste en cybersécurité forme à devenir un expert dans l'analyse et la gestion des risques liés à la cybersécurité.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Certification 2 -->
+    <div class="flip-card certification-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="static/images/MTCNA.png" alt="Certification 2">
+        </div>
+        <div class="flip-card-back">
+          <p>Acquérir les compétences nécessaires pour installer, configurer et gérer les équipements de réseau de MikroTik.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Certification 3 -->
+    <div class="flip-card certification-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="static/images/RGPD.png" alt="Certification 3">
+        </div>
+        <div class="flip-card-back">
+          <p>Responsabiliser les acteurs traitant des données et d'accroître la coopération entre les autorités de protection des données </p>
+        </div>
+      </div>
+    </div>
+    <!-- Certification 4 -->
+    <div class="flip-card certification-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="static/images/ANSSI.png" alt="Certification 4">
+        </div>
+        <div class="flip-card-back">
+          <p>Sensibiliser le plus grand nombre d'individus aux enjeux de la cybersécurité</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- SECTION CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-container">
+      <div class="contact-item">
+        <span class="contact-icon">📩</span>
+        <a href="mailto:damien.rigaudeaupro@gmail.com">damien.rigaudeaupro@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">📱</span>
+        <a href="tel:0769170861">07 69 17 08 61</a>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 - Damien RIGAUDEAU tout droits réservé</p>
+  </footer>
+  <!-- FLÈCHE BACK-TO-TOP (visible après défilement) -->
+  <a href="#home" class="back-to-top"></a>
+  <script>
+    // Pour le flip card sur clic : bascule la classe "flipped"
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', function() {
+        card.classList.toggle('flipped');
+      });
+    });
+    
+    // Affichage de la flèche "back-to-top" après défilement
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 200) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+    });
+  </script>
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu = document.querySelector('nav ul');
+    
+    menuIcon.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      
+      // Effet de clic sur le texte "Menu"
+      menuIcon.classList.add('clicked');
+      setTimeout(() => {
+        menuIcon.classList.remove('clicked');
+      }, 150);
+    });
+  </script>
+</body>
+</html>

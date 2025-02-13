@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function afficherImages() {
+            const checkbox1 = document.getElementById('checkbox1');
+            const checkbox2 = document.getElementById('checkbox2');
+            const checkbox3 = document.getElementById('checkbox3');
+
+
+            document.getElementById('image1').style.display = "none";
+            document.getElementById('image2').style.display = "none";
+            document.getElementById('image3').style.display = "none";
+
+            if (checkbox1.checked) {
+                document.getElementById('image1').style.display = "block";
+            }
+            if (checkbox2.checked) {
+                document.getElementById('image2').style.display = "block";
+            }
+            if (checkbox3.checked) {
+                document.getElementById('image3').style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Afficher des images</h1>
+    <hr/>
+
+    <p><input type="checkbox" id="checkbox1"> Image 1</p>
+    <p><input type="checkbox" id="checkbox2"> Image 2</p>
+    <p><input type="checkbox" id="checkbox3"> Image 3</p>
+
+    <button onclick="afficherImages()">Afficher</button>
+    <hr/>
+
+    <img id="image1" src="static/images/image1.png" alt="Image 1" style="display: none; width: 100px;">
+    <img id="image2" src="static/images/image2.png" alt="Image 2" style="display: none; width: 100px;">
+    <img id="image3" src="static/images/image3.png" alt="Image 3" style="display: none; width: 100px;">
+
+</body>
+</html>

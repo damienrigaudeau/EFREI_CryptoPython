@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Roulette Russe</title>
+<script>
+let redChambers = []; // Liste des chambres rouges sélectionnées
+let totalGains = 0; // Gains totaux du joueur
+
+// Fonction pour sélectionner une chambre rouge
+function chambre(n) {
+    const chamber = document.getElementById("Br" + n);
+
+    // Vérifier si la chambre est déjà rouge
+    if (chamber.style.fill === "red") {
+        // La retirer des chambres rouges
+        chamber.style.fill = "gray";
+        redChambers = redChambers.filter(num => num !== n);
+    } else {
+        // Ajouter une chambre rouge si on est en dessous de 3
+        if (redChambers.length < 3) {
+            chamber.style.fill = "red";
+            redChambers.push(n);
+        } else {
+            alert("Vous ne pouvez sélectionner que 3 chambres maximum !");
+        }
+    }
+}
+
+// Fonction pour lancer le jeu
+function lancer() {
+    if (redChambers.length === 0) {
+        alert("Veuillez sélectionner au moins une chambre rouge avant de jouer.");
+        return;
+    }
+
+    // Générer un numéro de chambre aléatoire
+    const Val = Math.floor((Math.random() * 6) + 1);
+    const blueChamber = document.getElementById("Br" + Val);
+
+    // Marquer la chambre tirée en bleu
+    blueChamber.style.fill = "blue";
+
+    // Délai pour afficher la case bleue avant le message
+    setTimeout(() => {
+        // Vérifier si c'est une chambre rouge (perdu) ou grise (gagné)
+        if (redChambers.includes(Val)) {
+            alert("Perdu ! La balle bleue est tombée sur une chambre rouge.");
+            totalGains = 0; // Perte totale
+        } else {
+            // Calculer les gains en fonction du nombre de chambres rouges
+            let gain = 0;
+            if (redChambers.length === 1) gain = 10000;
+            else if (redChambers.length === 2) gain = 100000;
+            else if (redChambers.length === 3) gain = 1000000;
+
+            totalGains += gain;
+            alert(`Gagné ! La balle bleue est tombée sur une chambre grise. Vos gains : ${gain.toLocaleString()}€. Total cumulé : ${totalGains.toLocaleString()}€.`);
+        }
+
+        // Mettre à jour les gains totaux affichés
+        document.getElementById("total-gains").innerText = totalGains.toLocaleString();
+        resetGame(false); // Réinitialiser pour permettre au joueur de rejouer
+    }, 500); // Délai de 500 ms pour montrer la case bleue
+}
+
+// Fonction pour réinitialiser le jeu
+function resetGame(resetGains) {
+    for (let i = 1; i <= 6; i++) {
+        const chamber = document.getElementById("Br" + i);
+        chamber.style.fill = "gray"; // Tout remettre en gris
+    }
+    redChambers = [];
+    if (resetGains) totalGains = 0; // Réinitialiser les gains si nécessaire
+}
+</script>
+</head>
+<body>
+<h1>Roulette Russe</h1>
+<h2>Gains totaux : <span id="total-gains">0</span>€</h2>
+
+<svg width="200" height="200" style="background-color:antiquewhite">
+    <circle cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
+    <circle id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(1)" />
+    <circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(2)" />
+    <circle id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(3)" />
+    <circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(4)" />
+    <circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(5)" />
+    <circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(6)" />
+    <circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
+</svg>    
+
+<button onclick="lancer()">Jouer</button>    
+
+</body>
+</html>

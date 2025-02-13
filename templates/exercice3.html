@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<body>
+
+    <h1>Exercice 3 : Un formulaire avec plein de choses !</h1>
+    
+    <form action="#" method="post">
+        <!-- Champ pour le pseudo -->
+        <label for="pseudo">Votre pseudo :</label>
+        <input type="text" id="pseudo" name="pseudo"><br><br>
+
+        <!-- Champ pour le mot de passe -->
+        <label for="password">Votre mot de passe :</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <!-- Champ pour ressaisir le mot de passe -->
+        <label for="password-confirm">Ressaisir votre mot de passe :</label>
+        <input type="password" id="password-confirm" name="password-confirm"><br><br>
+
+        <!-- Choix du système d'exploitation préféré -->
+        <p>OS préféré :</p>
+        <input type="radio" id="windows-xp" name="os" value="windows-xp">
+        <label for="windows-xp">Windows XP</label><br>
+        
+        <input type="radio" id="windows-vista" name="os" value="windows-vista">
+        <label for="windows-vista">Windows Vista</label><br>
+        
+        <input type="radio" id="macos" name="os" value="macos">
+        <label for="macos">MacOS X</label><br>
+        
+        <input type="radio" id="linux" name="os" value="linux">
+        <label for="linux">Linux</label><br>
+        
+        <input type="radio" id="autre" name="os" value="autre">
+        <label for="autre">Autre</label><br><br>
+
+        <!-- Choix du matériel possédé -->
+        <p>Vous possédez :</p>
+        <input type="checkbox" id="desktop" name="possessions" value="desktop">
+        <label for="desktop">Un ordinateur de bureau</label><br>
+        
+        <input type="checkbox" id="laptop" name="possessions" value="laptop">
+        <label for="laptop">Un portable</label><br>
+        
+        <input type="checkbox" id="netbook" name="possessions" value="netbook">
+        <label for="netbook">Un netbook</label><br>
+        
+        <input type="checkbox" id="tablet" name="possessions" value="tablet">
+        <label for="tablet">Une tablette (Pad)</label><br><br>
+
+        <!-- Liste déroulante pour la profession -->
+        <label for="profession">Votre profession :</label>
+        <select id="profession" name="profession" size="5">
+            <option value="chomeur">Chômeur</option>
+            <option value="etudiant">Étudiant</option>
+            <option value="fonctionnaire">Fonctionnaire</option>
+            <option value="prive">Privé</option>
+            <option value="retraite">Retraité</option>
+        </select><br><br>
+
+        <!-- Bouton pour soumettre le formulaire -->
+        <button type="submit">S'inscrire !</button>
+    </form>
+
+</body>
+</html>

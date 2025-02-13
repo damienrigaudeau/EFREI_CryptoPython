@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Roulette Russe</title>
+<script>
+let redChamber = null;
+
+
+function lancer() {
+    if (redChamber === null) {
+        alert("Veuillez insérer une balle avant de jouer.");
+        return;
+    }
+
+    let Val = Math.floor((Math.random() * 6) + 1);
+    alert("Le pistolet a tiré le barillet numéro " + Val);
+
+
+    if (document.getElementById("Br" + Val).style.fill === "red") {
+        alert("BOOM perdu!");
+    } else {
+        alert("Survécu !");
+    }
+}
+
+
+function chambre(n) {
+    for (let i = 1; i <= 6; i++) {
+        document.getElementById("Br" + i).style.fill = "gray";
+    }
+
+    document.getElementById("Br" + n).style.fill = "red";
+    redChamber = n;
+    alert("La chambre " + n + " est chargé");
+}
+</script>
+</head>
+<body>
+<h1>Roulette Russe</h1>
+
+<svg width="200" height="200" style="background-color:antiquewhite">
+    <circle onclick="1()" cx="100" cy="100" r="95" stroke="black" stroke-width="3" fill="none" />
+    <circle id="Br1" cx="100" cy="40" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(1)" />
+    <circle id="Br2" cx="150" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(2)" />
+    <circle id="Br3" cx="50" cy="70" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(3)" />
+    <circle id="Br4" cx="50" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(4)" />
+    <circle id="Br5" cx="150" cy="130" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(5)" />
+    <circle id="Br6" cx="100" cy="160" r="25" stroke="black" stroke-width="3" fill="gray" onclick="chambre(6)" />
+    <circle cx="100" cy="100" r="10" stroke="black" stroke-width="3" fill="black" />
+</svg>    
+
+<button onclick="lancer()">Jouer</button>    
+
+</body>
+</html>
