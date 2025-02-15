@@ -178,13 +178,13 @@ p {
 /* Séparation et coloration des Soft Skills dans la section compétences */
 #skills h3 {
   margin-top: 40px;
-  color: red;
+  color: #fbff00;
 }
 
 #skills h3 + ul li {
   color: #ccc;
   font-weight: bold;
-  border-color: red;
+  border-color: #fbff00;
 }
 
 /* ============================================= */
