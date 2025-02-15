@@ -170,7 +170,7 @@ p {
   padding: 10px 20px;
   border-radius: 30px;
   border: 1px solid #00ff99;
-  color: #00ff99;
+  color: #ccc;
   font-size: 0.9rem;
 }
 
@@ -181,7 +181,7 @@ p {
 }
 
 #skills h3 + ul li {
-  color: red;
+  color: #ccc;
   border-color: red;
 }
 
