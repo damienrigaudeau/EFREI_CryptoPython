@@ -171,6 +171,7 @@ p {
   border-radius: 30px;
   border: 1px solid #00ff99;
   color: #ccc;
+  font-weight: bold;
   font-size: 0.9rem;
 }
 
@@ -182,6 +183,7 @@ p {
 
 #skills h3 + ul li {
   color: #ccc;
+  font-weight: bold;
   border-color: red;
 }
 
